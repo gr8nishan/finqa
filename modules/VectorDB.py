@@ -67,7 +67,7 @@ class VectorDB():
             qa_chain_prompt = PromptTemplate.from_template(template)
 
         # Build QuestionAnswer chain
-        if source == 'Uploaded documents / weblinks':
+        if source == 'Uploaded documents':
             self.qa_chain = RetrievalQA.from_chain_type(
                 self.llm,
                 retriever=self.vector_db.as_retriever(
