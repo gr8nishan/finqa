@@ -115,12 +115,12 @@ class InfoLoader():
                 text_content=False
             )
             data = loader.load()
-            splitter = RecursiveJsonSplitter(max_chunk_size=1000)
+            # splitter = RecursiveJsonSplitter(max_chunk_size=1000)
             # print(data)
             # if self.splitter:
             #     document_chunks = self.splitter.split_documents(data)
             # else:
-            document_chunks = splitter.split_json(data)
+            document_chunks = data[0:11]
             print("document chunk", document_chunks[0])
             # print("length of document chunk", len(document_chunks[0]))
             # Update the metadata
