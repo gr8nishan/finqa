@@ -4,6 +4,8 @@ from modules.InfoLoader import InfoLoader
 from modules.VectorDB import VectorDB
 import logging
 
+
+#https://gr8nishan-finrag.streamlit.app/
 @st.cache_resource
 def configure_logging(file_path=None, streaming=None, level=logging.INFO):
     '''
@@ -104,7 +106,7 @@ def main():
         # st.write('And / Or')
         # weblinks = st.text_area(label = 'Retrieve from website or youtube video transcript (Enter every link on a new line)').split('\n')
         api_option = ""
-        openai_api_key = "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"
+        openai_api_key = "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"
         if api_option != 'Host API key usage cap reached!':
             if st.button('Upload', type='primary') and uploaded_files:
                 with st.status('Uploading... (this may take a while)', expanded=True) as status:
