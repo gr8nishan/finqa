@@ -152,12 +152,12 @@ def main():
                               )
 
         # Select for model and prompt template settings
-        prompt_mode = st.selectbox(
-            'Choose mode of prompt',
-            options = ('Restricted', 'Unrestricted'),
-            help='Restricted mode will reduce chances of LLM answering using out of context knowledge',
-            # disabled = missing_api_key
-            )
+        # prompt_mode = st.selectbox(
+        #     'Choose mode of prompt',
+        #     options = ('Restricted', 'Unrestricted'),
+        #     help='Restricted mode will reduce chances of LLM answering using out of context knowledge',
+        #     # disabled = missing_api_key
+        #     )
         # temperature = st.select_slider(
         #     'Select temperature', 
         #     options=[x / 10 for x in range(0, 21)],
@@ -165,7 +165,7 @@ def main():
         #         Going above 1 creates more unpredictable responses and takes longer.',
         #     # disabled = missing_api_key
         #     )
-        # prompt_mode = "restricted"
+        prompt_mode = "Unrestricted"
         temperature = 0
         # Display error if no API key given
         # if not openai_api_key.startswith('sk-'):
