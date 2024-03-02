@@ -1,8 +1,8 @@
-# Financial Question Answering(QA) with LangChain and OpenAI 
+# Financial QA with LangChain and OpenAI 
 <a href="https://github.com/sienlonglim/LangChain"><img alt="Static Badge" src="https://img.shields.io/badge/github-black?style=flat-square&logo=github"></a> 
 <a href="https://document-query-bot.streamlit.app/"><img alt="Static Badge" src="https://img.shields.io/badge/Streamlit%20App-red?style=flat-square&logo=streamlit&labelColor=white"></a> 
 
-This project implements QA using OpenAI's embedding models and LangChain's Python library.  The aim is to make a user-friendly Financial QA application with the ability to ingest data from multiple sources (word, pdf, txt, json)
+This project implements FinQA using OpenAI's embedding models and LangChain's Python library.  The aim is to make a user-friendly Financial QA application with the ability to ingest data from multiple sources (word, pdf, txt, json)
 
 ## Application URL
 https://gr8nishan-finrag.streamlit.app/
