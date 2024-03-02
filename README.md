@@ -4,17 +4,33 @@
 
 This project implements QA using OpenAI's embedding models and LangChain's Python library.  The aim is to make a user-friendly Financial QA application with the ability to ingest data from multiple sources (word, pdf, txt, json)
 
-Dataset Used
+## Problem Statement
+
+The sheer volume of financial statements makes it difficult for humans to access and analyze a business's financials. Robust numerical reasoning likewise faces unique challenges in this domain. In this work, we focus on answering deep questions about financial data, aiming to automate the analysis of a large corpus of financial documents. In contrast to existing tasks in the general domain, the finance domain includes complex numerical reasoning and an understanding of heterogeneous representations. To facilitate analytical progress, we propose a new large-scale dataset, FinQA, with Question-Answering pairs over Financial reports, written by financial experts.
+
+## Dataset Used
 
 - We used the dataset from this link
   https://github.com/czyssrs/finqa
+- Data is present in the below format
+  - "pre_text": the texts before the table;
+  - "post_text": the text after the table;
+  - "table": the table;
+  - "id": unique example id. composed by the original report name plus an example index for this report.
+  - "qa": {
+    "question": the question;
+     "program": the reasoning program;
+     "gold_inds": the gold supporting facts;
+     "exe_ans": the gold execution result;
+     "program_re": the reasoning program in nested format;
+  }
 
-Process -
-- Upload the json files downloaded from the datasources. Because of open ai token constraint we read only 100 rows for now.
-- Ask Question in the UI
+## Process
+- Upload the JSON files downloaded from the data sources. Because of the Open AI token constraint, we read only 100 rows for now.
+- When the data is uploaded the data is cleaned. We remove all the irrelevant characters and fields before creating embeddings.
+- Ask questions in the UI
 
-
-Domain areas include:
+## Domain areas include:
 - Document splitting
 - Embeddings (OpenAI)
 - Vector database (Chroma / FAISS)
@@ -23,7 +39,7 @@ Domain areas include:
 
 ![Screenshot](images/framework.png)
 
-## Upcoming works:
+## Upcoming work:
 - Capability to create embeddings for any amount of data 
 - In memory vector database to cloud-native vector database
 - Introduce conversation retriever and memory states
