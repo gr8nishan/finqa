@@ -1,11 +1,10 @@
 # Financial QA with LangChain and OpenAI 
-<a href="https://github.com/sienlonglim/LangChain"><img alt="Static Badge" src="https://img.shields.io/badge/github-black?style=flat-square&logo=github"></a> 
-<a href="https://document-query-bot.streamlit.app/"><img alt="Static Badge" src="https://img.shields.io/badge/Streamlit%20App-red?style=flat-square&logo=streamlit&labelColor=white"></a> 
+<a href="https://github.com/gr8nishan/finqa"><img alt="Static Badge" src="https://img.shields.io/badge/github-black?style=flat-square&logo=github"></a> 
+<a href="https://gr8nishan-finrag.streamlit.app/"><img alt="Static Badge" src="https://img.shields.io/badge/Streamlit%20App-red?style=flat-square&logo=streamlit&labelColor=white"></a> 
 
 This project implements FinQA using OpenAI's embedding models and LangChain's Python library.  The aim is to make a user-friendly Financial QA application with the ability to ingest data from multiple sources (word, pdf, txt, json)
 
-## Application URL
-https://gr8nishan-finrag.streamlit.app/
+
 
 ## Problem Statement
 
@@ -44,9 +43,9 @@ The sheer volume of financial statements makes it difficult for humans to access
 
 ## Upcoming work:
 - Capability to create embeddings for any amount of data 
-- In memory vector database to cloud-native vector database
+- In-memory vector database to cloud-native vector database
 - Introduce conversation retriever and memory states
-- Fine tuning model on FinQA dataset
+- Fine-tuning model on the FinQA dataset
 
 
 
