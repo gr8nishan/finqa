@@ -48,7 +48,7 @@ def initialize_session_state():
     # Create an API call counter, to cap usage
     if 'usage_counter' not in st.session_state:
         st.session_state.usage_counter = 0
-    st.session_state.openai_api_key_host = "st.secrets['openai_api_key']"
+    st.session_state.openai_api_key_host = st.secrets['openai_api_key']
     # Check if host api key is enabled
     if 'openai_api_key_host' not in st.session_state:
         if st.session_state.config['enable_host_api_key']:
