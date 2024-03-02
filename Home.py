@@ -48,7 +48,7 @@ def initialize_session_state():
     # Create an API call counter, to cap usage
     if 'usage_counter' not in st.session_state:
         st.session_state.usage_counter = 0
-
+    st.session_state.openai_api_key_host = "st.secrets['openai_api_key']"
     # Check if host api key is enabled
     if 'openai_api_key_host' not in st.session_state:
         if st.session_state.config['enable_host_api_key']:
@@ -107,6 +107,7 @@ def main():
         # weblinks = st.text_area(label = 'Retrieve from website or youtube video transcript (Enter every link on a new line)').split('\n')
         api_option = ""
         openai_api_key = st.session_state.openai_api_key_host
+        print("open api key open api key", openai_api_key)
         if api_option != 'Host API key usage cap reached!':
             if st.button('Upload', type='primary') and uploaded_files:
                 with st.status('Uploading... (this may take a while)', expanded=True) as status:
